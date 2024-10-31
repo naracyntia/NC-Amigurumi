@@ -32,7 +32,7 @@ a:hover {
 }
 
 #produtos img {
-    max-width: 100%; /* Limita a largura máxima ao tamanho do contêiner */
+    max-width: 50%; /* Limita a largura máxima ao tamanho do contêiner */
     height: auto; /* Ajusta a altura proporcionalmente */
     display: block; /* Para evitar espaço abaixo da imagem */
     margin: 0 auto; /* Centraliza a imagem */
@@ -41,7 +41,7 @@ a:hover {
 
 .imagem-container {
     width: 10px; /* Largura desejada */
-    height: 50px; /* Altura desejada */
+    height: 30px; /* Altura desejada */
     overflow: hidden; /* Oculta partes da imagem que saem do contêiner */
     position: relative; /* Necessário para o posicionamento da imagem */
 }
