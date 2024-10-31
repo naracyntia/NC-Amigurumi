@@ -38,3 +38,16 @@ a:hover {
     margin: 0 auto; /* Centraliza a imagem */
     border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
+
+.imagem-container {
+    width: 300px; /* Largura desejada */
+    height: 200px; /* Altura desejada */
+    overflow: hidden; /* Oculta partes da imagem que saem do contêiner */
+    position: relative; /* Necessário para o posicionamento da imagem */
+}
+
+.imagem-container img {
+    width: 100%; /* Largura total do contêiner */
+    height: 100%; /* Altura total do contêiner */
+    object-fit: cover; /* Cobre todo o contêiner sem distorcer */
+}
