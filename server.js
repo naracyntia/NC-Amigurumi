@@ -28,7 +28,7 @@ app.post('/api/pedidos', async (req, res) => {
         },
         devedor: {
             nome: nome,
-            cpf: "00000000000", // Substitua pelo CPF do cliente, se disponível
+            cpf: " ", // Substitua pelo CPF do cliente, se disponível
         },
         valor: {
             original: " ", // Valor do produto em reais (exemplo)
