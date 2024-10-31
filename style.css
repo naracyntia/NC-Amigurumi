@@ -3,20 +3,20 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-color: rgb(240, 240, 255); /* Lilás claro */
+    background-color: rgb(180, 125, 231); /* Lilás claro */
 }
 
 header, footer {
     text-align: center;
     padding: 1em;
-    background-color: rgb(200, 162, 200); /* Lilás */
+    background-color: rgb(180, 125, 231); /* Lilás */
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
 a {
-    color: rgb(100, 100, 250); /* Azul */
+    color: rgb(180, 125, 231); /* Azul */
     text-decoration: none; /* Remove o sublinhado */
 }
 
