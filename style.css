@@ -32,25 +32,11 @@ a:hover {
 }
 
 #Amigurumi img {
-    width: 200px; /* Defina a largura máxima desejada */
+    width: 300px; /* Defina a largura máxima desejada */
     height: auto; /* Mantém a proporção da imagem */
     margin: 10px; /* Espaço ao redor de cada imagem */
     border-radius: 5px; /* Opcional: arredonda os cantos das imagens */
 }
-
-
-/* .imagem-container {
-    width: 100px; /* Largura desejada */
-    height: 50px; /* Altura desejada */
-    overflow: hidden; /* Oculta partes da imagem que saem do contêiner */
-    position: relative; /* Necessário para o posicionamento da imagem */
-}
-
-.imagem-container img {
-    width: 50%; /* Largura total do contêiner */
-    height: 50%; /* Altura total do contêiner */
-    object-fit: cover; /* Cobre todo o contêiner sem distorcer */
-} */
 
 div {
     display: block;
