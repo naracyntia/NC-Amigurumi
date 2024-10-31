@@ -40,7 +40,7 @@ a:hover {
 }
 
 .imagem-container {
-    width: 100px; /* Largura desejada */
+    width: 10px; /* Largura desejada */
     height: 50px; /* Altura desejada */
     overflow: hidden; /* Oculta partes da imagem que saem do contêiner */
     position: relative; /* Necessário para o posicionamento da imagem */
