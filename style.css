@@ -10,13 +10,13 @@ header, footer {
     text-align: center;
     padding: 1em;
     background-color: rgb(180, 125, 231); /* Lilás */
-    color: white;
+    color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
 a {
-    color: rgb(180, 125, 231); /* Azul */
+    color: rgb(229, 218, 240); 
     text-decoration: none; /* Remove o sublinhado */
 }
 
