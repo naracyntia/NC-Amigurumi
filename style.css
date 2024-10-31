@@ -31,13 +31,13 @@ a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-#produtos img {
-    max-width: 50%; /* Limita a largura máxima ao tamanho do contêiner */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    display: block; /* Para evitar espaço abaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem */
-    border-radius: 5px; /* Bordas arredondadas (opcional) */
+#Amigurumi img {
+    width: 200px; /* Defina a largura máxima desejada */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px; /* Espaço ao redor de cada imagem */
+    border-radius: 5px; /* Opcional: arredonda os cantos das imagens */
 }
+
 
 .imagem-container {
     width: 100px; /* Largura desejada */
