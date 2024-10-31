@@ -56,3 +56,34 @@ div {
     display: block;
     unicode-bidi: isolate;
 }
+
+
+#produtos {
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+}
+
+#carrinho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 300px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}

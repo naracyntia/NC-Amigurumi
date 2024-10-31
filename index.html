@@ -9,35 +9,152 @@
 <body>
     <header>
         <h1>Bem-vindo à NC Amigurumi</h1>
-        <p>Aqui, transformamos criatividade e carinho em pequenos amigos de crochê, trazendo para você e para sua família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.
-
-           Além disso, estamos comprometidos com a sustentabilidade, utilizando materiais ecologicamente responsáveis sempre que possível, para que cada peça não apenas encante, mas também respeite o nosso planeta.
-            
-           Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos produtos e encontre o amigurumi ideal para você ou para quem você ama!</p>
+        <p>Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para sua família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.</p>
+        <p>Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos produtos e encontre o amigurumi ideal para você ou para quem você ama!</p>
+        <button onclick="toggleCarrinho()">Carrinho (<span id="total-items">0</span>)</button>
     </header>
+
     <section id="Amigurumi">
-        <h2>Nossos amigurumis</h2>
+        <h2>Nossos Amigurumis</h2>
         <p>São mais do que apenas itens decorativos ou brinquedos: são peças que carregam sentimentos, sendo perfeitos para presentear e alegrar os ambientes. Contamos com uma grande variedade de modelos, desde personagens infantis até animais e figuras temáticas, atendendo a todas as idades e preferências.</p>
-        <img src="fotos\camphoto_1903590565.jpg" alt="Raposa">
-        <img src="fotos\capivara1.JPEG" alt="Capivara">
-        <img src="fotos\capivara2.JPEG" alt="Capivara">
-        <img src="fotos\duolingo.JPEG" alt="Duolingo">
-        <img src="fotos\edwiges.JPEG" alt="Edwiges">
-        <img src="fotos\homemaranha.JPEG" alt="Homem Aranha">
-        <img src="fotos\mickeyfrente.JPEG" alt="Mickey">
-        <img src="fotos\mickeycosta.JPEG" alt="Mickey">
-        <img src="fotos\pintinhoamarelinho.jpg" alt="Pintinho">
-        <img src="fotos\portatreco.JPEG" alt="Porta Treco">
-        <img src="fotos\vaquinhafrente.JPEG" alt="Vaquinha">
-        <img src="fotos\vaquinhacosta.JPEG" alt="Vaquinha">
-        <img src="fotos/cachorrinho.jpeg" alt="Cachorrinho">
-        <img src="fotos/cachorrinho2.jpeg" alt="Cachorrinho">
-        <img src="fotos/santinha.jpg" alt="Santinha">
         
+        <!-- Lista de Produtos -->
+        <div class="produto" data-id="1" data-nome="Raposa" data-preco="50.00">
+            <img src="fotos/camphoto_1903590565.jpg" alt="Raposa">
+            <h3>Raposa</h3>
+            <p>R$50,00</p>
+            <button onclick="adicionarAoCarrinho(1)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="2" data-nome="Capivara" data-preco="95.00">
+            <img src="fotos/capivara1.JPEG" alt="Capivara">
+            <img src="fotos/capivara2.JPEG" alt="Capivara">
+            <h3>Capivara</h3>
+            <p>R$95,00</p>
+            <button onclick="adicionarAoCarrinho(2)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="3" data-nome="Cachorrinho" data-preco="30.00">
+            <img src="fotos/cachorrinho.jpeg" alt="Cachorrinho">
+            <img src="fotos/cachorrinho2.jpeg" alt="Cachorrinho">
+            <h3>Cachorrinho</h3>
+            <p>R$30,00</p>
+            <button onclick="adicionarAoCarrinho(3)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="4" data-nome="Duolingo" data-preco="70.00">
+            <img src="fotos/duolingo.JPEG" alt="Duolingo">
+            <h3>Duolingo</h3>
+            <p>R$70,00</p>
+            <button onclick="adicionarAoCarrinho(4)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="5" data-nome="Edwiges" data-preco="70.00">
+            <img src="fotos/edwiges.JPEG" alt="Edwiges">
+            <h3>Edwiges</h3>
+            <p>R$70,00</p>
+            <button onclick="adicionarAoCarrinho(5)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="6" data-nome="Homem Aranha" data-preco="85.00">
+            <img src="fotos/homemaranha.JPEG" alt="homemaranha">
+            <h3>Homem Aranha</h3>
+            <p>R$85,00</p>
+            <button onclick="adicionarAoCarrinho(6)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="7" data-nome="Mickey" data-preco="95.00">
+            <img src="fotos/mickeyfrente.JPEG" alt="mickey">
+            <img src="fotos/mickeycosta.JPEG" alt="mickey">
+            <h3>Mickey</h3>
+            <p>R$95,00</p>
+            <button onclick="adicionarAoCarrinho(7)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="8" data-nome="Pintinho amarelinho" data-preco="55.00">
+            <img src="fotos/pintinhoamarelinho.jpg" alt="pintinhoamarelinho">
+            <h3>Pintinho Amarelinho</h3>
+            <p>R$55,00</p>
+            <button onclick="adicionarAoCarrinho(8)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="9" data-nome="Porta treco" data-preco="25.00">
+            <img src="fotos/portatreco.JPEG" alt="portatreco">
+            <h3>Porta treco</h3>
+            <p>R$25,00</p>
+            <button onclick="adicionarAoCarrinho(9)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="10" data-nome="Santinha" data-preco="25.00">
+            <img src="fotos/santinha.jpg" alt="santinha">
+            <h3>Santinha</h3>
+            <p>R$25,00</p>
+            <button onclick="adicionarAoCarrinho(10)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto" data-id="11" data-nome="Vaquinha" data-preco="110.00">
+            <img src="fotos/vaquinhafrente.JPEG" alt="vaquinha">
+            <img src="fotos/vaquinhacosta.JPEG" alt="vaquinha">
+            <h3>Vaquinha</h3>
+            <p>R$110,00</p>
+            <button onclick="adicionarAoCarrinho(11)">Adicionar ao Carrinho</button>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
     </section>
+
+    <!-- Carrinho de Compras -->
+    <section id="carrinho" style="display: none;">
+        <h2>Seu Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p>Total: R$<span id="total-preco">0.00</span></p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
     <footer>
         <p>Contato: ncyntia@hotmail.com</p>
         <p>Contato: 21 99969-1639</p>
     </footer>
+
+    <script>
+        let carrinho = [];
+
+        function adicionarAoCarrinho(idProduto) {
+            const produtoElemento = document.querySelector(`.produto[data-id='${idProduto}']`);
+            const nomeProduto = produtoElemento.getAttribute("data-nome");
+            const precoProduto = parseFloat(produtoElemento.getAttribute("data-preco"));
+
+            const produtoExistente = carrinho.find(produto => produto.id === idProduto);
+
+            if (produtoExistente) {
+                produtoExistente.quantidade += 1;
+            } else {
+                carrinho.push({ id: idProduto, nome: nomeProduto, preco: precoProduto, quantidade: 1 });
+            }
+
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const listaCarrinho = document.getElementById("lista-carrinho");
+            const totalItems = document.getElementById("total-items");
+            const totalPreco = document.getElementById("total-preco");
+
+            listaCarrinho.innerHTML = "";
+            let total = 0;
+
+            carrinho.forEach(produto => {
+                total += produto.preco * produto.quantidade;
+
+                const itemCarrinho = document.createElement("li");
+                itemCarrinho.textContent = `${produto.nome} - R$${produto.preco.toFixed(2)} x ${produto.quantidade}`;
+                listaCarrinho.appendChild(itemCarrinho);
+            });
+
+            totalItems.textContent = carrinho.reduce((sum, produto) => sum + produto.quantidade, 0);
+            totalPreco.textContent = total.toFixed(2);
+        }
+
+        function toggleCarrinho() {
+            const carrinhoSection = document.getElementById("carrinho");
+            carrinhoSection.style.display = carrinhoSection.style.display === "none" ? "block" : "none";
+        }
+
+        function finalizarCompra() {
+            alert("Compra finalizada! Obrigado por comprar conosco.");
+            carrinho = [];
+            atualizarCarrinho();
+            toggleCarrinho();
+        }
+    </script>
 </body>
 </html>
