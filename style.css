@@ -9,7 +9,7 @@ body {
 header {
     text-align: center;
     padding: 1em;
-    background-color: purple; 
+    background-color: rgb(229, 191, 247); 
     color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -40,8 +40,8 @@ a:hover {
 }
 
 .imagem-container {
-    width: 10px; /* Largura desejada */
-    height: 30px; /* Altura desejada */
+    width: 500px; /* Largura desejada */
+    height: 200px; /* Altura desejada */
     overflow: hidden; /* Oculta partes da imagem que saem do contêiner */
     position: relative; /* Necessário para o posicionamento da imagem */
 }
