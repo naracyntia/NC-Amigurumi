@@ -3,11 +3,11 @@ body {
     color: black;
     margin: 0;
     padding: 0;
-    background-color: rgb(180, 125, 231); /* Lilás claro */
+    background-color: white; /* Lilás claro */
 }
 
 header, footer {
-    text-align: center;
+    text-align: justify;
     padding: 1em;
     background-color: white; 
     color: black;
