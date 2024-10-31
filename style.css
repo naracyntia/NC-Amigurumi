@@ -40,15 +40,15 @@ a:hover {
 }
 
 .imagem-container {
-    width: 200px; /* Largura desejada */
-    height: 100px; /* Altura desejada */
+    width: 100px; /* Largura desejada */
+    height: 50px; /* Altura desejada */
     overflow: hidden; /* Oculta partes da imagem que saem do contêiner */
     position: relative; /* Necessário para o posicionamento da imagem */
 }
 
 .imagem-container img {
-    width: 100%; /* Largura total do contêiner */
-    height: 100%; /* Altura total do contêiner */
+    width: 50%; /* Largura total do contêiner */
+    height: 50%; /* Altura total do contêiner */
     object-fit: cover; /* Cobre todo o contêiner sem distorcer */
 }
 
