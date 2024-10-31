@@ -30,3 +30,9 @@ a {
 a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
+
+#produtos img {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+}
