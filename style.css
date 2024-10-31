@@ -32,7 +32,9 @@ a:hover {
 }
 
 #produtos img {
-    display: block;
+    max-width: 100%; /* Limita a largura máxima ao tamanho do contêiner */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    display: block; /* Para evitar espaço abaixo da imagem */
     margin: 0 auto; /* Centraliza a imagem */
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
