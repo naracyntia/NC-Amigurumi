@@ -76,7 +76,7 @@ button {
 
 #videos video, #videos iframe {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     height: auto;
 }
 
