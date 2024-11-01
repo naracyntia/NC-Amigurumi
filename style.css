@@ -79,3 +79,15 @@ button {
     max-width: 600px;
     height: auto;
 }
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os itens */
+}
+
+#galeria img, #galeria video {
+    width: calc(33.33% - 10px); /* 3 itens por linha com espaço entre eles */
+    max-width: 100%;
+    height: auto;
+}
