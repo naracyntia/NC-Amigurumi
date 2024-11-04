@@ -39,7 +39,7 @@ a:hover {
 }
 
 div {
-    display: block;
+    display: flex;
     unicode-bidi: isolate;
 }
 

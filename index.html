@@ -207,3 +207,63 @@
     </script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Pedido</title>
+</head>
+<body>
+    <h2>Finalizar Pedido</h2>
+
+    <!-- Formulário de Informações do Pedido -->
+    <form id="pedidoForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="produto">Produto Escolhido:</label>
+        <select id="produto" name="produto" required>
+            <option value="Raposa">Raposa</option>
+            <option value="Capivara">Capivara</option>
+            <!-- Adicione mais opções de produtos conforme necessário -->
+        </select><br><br>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+
+    <!-- Local para mostrar o QR Code Pix -->
+    <div id="pixQR" style="display:none;">
+        <h3>Escaneie o QR Code para realizar o pagamento:</h3>
+        <img id="qrCodeImg" src="" alt="QR Code Pix">
+    </div>
+
+    <script>
+        document.getElementById('pedidoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const produto = document.getElementById('produto').value;
+
+            // Enviar os dados do pedido para o backend (substituir URL do backend)
+            fetch('https://seu-backend.com/api/pedidos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome, email, produto })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Exibir o QR Code Pix
+                document.getElementById('pixQR').style.display = 'block';
+                document.getElementById('qrCodeImg').src = data.qrCodeURL; // Link do QR Code retornado pelo backend
+            })
+            .catch(error => console.error('Erro ao enviar o pedido:', error));
+        });
+    </script>
+</body>
+</html>
