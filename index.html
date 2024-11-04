@@ -11,7 +11,7 @@
         <h1>Bem-vindo à NC Amigurumi</h1>
         <p>Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para sua família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.</p>
         <p>Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos produtos e encontre o amigurumi ideal para você ou para quem você ama!</p>
-        <button onclick="toggleCarrinho()">Carrinho (<span id="total-items">0</span>)</button>
+        <a href="finalizar-pedido.html"><button>Finalizar Pedido</button>Carrinho (<span id="total-items">0</span>)</a>
     </header>
 
     <section id="Amigurumi">
@@ -138,143 +138,15 @@
             
             <!-- Adicione mais imagens e vídeos conforme necessário -->
         </section>
-            
     
-    <!-- Carrinho de Compras -->
-    <section id="carrinho" style="display: none;">
-        <h2>Seu Carrinho</h2>
-        <ul id="lista-carrinho"></ul>
-        <p>Total: R$<span id="total-preco">0.00</span></p>
-        <button onclick="finalizarCompra()">Finalizar Compra</button>
-    </section>
+        <section>
+            <!-- Conteúdo da loja e produtos -->
+            <div id="cart"></div>
+            <div id="total"></div>
+        </section>
+    
+        <!-- Link para o arquivo de JavaScript -->
+        <script src="script.js"></script>
+    </body>
+    </html>
 
-    <footer>
-        <p>Forma de Pagamento apenas pix: (21) 99969-1639</p>
-        <p>Contato: ncyntia@hotmail.com</p>
-        <p>Contato: 21 99969-1639</p>
-    </footer>
-
-    <script>
-        let carrinho = [];
-
-        function adicionarAoCarrinho(idProduto) {
-            const produtoElemento = document.querySelector(`.produto[data-id='${idProduto}']`);
-            const nomeProduto = produtoElemento.getAttribute("data-nome");
-            const precoProduto = parseFloat(produtoElemento.getAttribute("data-preco"));
-
-            const produtoExistente = carrinho.find(produto => produto.id === idProduto);
-
-            if (produtoExistente) {
-                produtoExistente.quantidade += 1;
-            } else {
-                carrinho.push({ id: idProduto, nome: nomeProduto, preco: precoProduto, quantidade: 1 });
-            }
-
-            atualizarCarrinho();
-        }
-
-        function atualizarCarrinho() {
-            const listaCarrinho = document.getElementById("lista-carrinho");
-            const totalItems = document.getElementById("total-items");
-            const totalPreco = document.getElementById("total-preco");
-
-            listaCarrinho.innerHTML = "";
-            let total = 0;
-
-            carrinho.forEach(produto => {
-                total += produto.preco * produto.quantidade;
-
-                const itemCarrinho = document.createElement("li");
-                itemCarrinho.textContent = `${produto.nome} - R$${produto.preco.toFixed(2)} x ${produto.quantidade}`;
-                listaCarrinho.appendChild(itemCarrinho);
-            });
-
-            totalItems.textContent = carrinho.reduce((sum, produto) => sum + produto.quantidade, 0);
-            totalPreco.textContent = total.toFixed(2);
-        }
-
-        function toggleCarrinho() {
-            const carrinhoSection = document.getElementById("carrinho");
-            carrinhoSection.style.display = carrinhoSection.style.display === "none" ? "block" : "none";
-        }
-
-        function finalizarCompra() {
-            alert("Compra finalizada! Obrigado por comprar conosco.");
-            carrinho = [];
-            atualizarCarrinho();
-            toggleCarrinho();
-        }
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Pedido</title>
-</head>
-<body>
-    <h2>Finalizar Pedido</h2>
-
-    <!-- Formulário de Informações do Pedido -->
-    <form id="pedidoForm">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="produto">Produto Escolhido:</label>
-        <select id="produto" name="produto" required>
-            <option value="Capivara">Capivara</option>
-            <option value="Cachorrinho">Cachorrinho</option>
-            <option value="Coala">Coala</option>
-            <option value="Duolingo">Duolingo</option>
-            <option value="Edwiges">Edwiges</option>
-            <option value="Homem Aranha">Homem Aranha</option>
-            <option value="Mickey">Mickey</option>
-            <option value="Pintinho Amarelinho">Pintinho Amarelinho</option>
-            <option value="Porta Treco">Porta Treco</option>
-            <option value="Raposa">Raposa</option>
-            <option value="Santinha">Santinha</option>
-            <option value="Vaquinha">Vaquinha</option>
-
-            <!-- Adicione mais opções de produtos conforme necessário -->
-        </select><br><br>
-
-        <button type="submit">Enviar Pedido</button>
-    </form>
-
-    <!-- Local para mostrar o QR Code Pix -->
-    <div id="pixQR" style="display:none;">
-        <h3>Escaneie o QR Code para realizar o pagamento:</h3>
-        <img id="qrCodeImg" src="" alt="QR Code Pix">
-    </div>
-
-    <script>
-        document.getElementById('pedidoForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const produto = document.getElementById('produto').value;
-
-            // Enviar os dados do pedido para o backend (substituir URL do backend)
-            fetch('https://seu-backend.com/api/pedidos', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nome, email, produto })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Exibir o QR Code Pix
-                document.getElementById('pixQR').style.display = 'block';
-                document.getElementById('qrCodeImg').src = data.qrCodeURL; // Link do QR Code retornado pelo backend
-            })
-            .catch(error => console.error('Erro ao enviar o pedido:', error));
-        });
-    </script>
-</body>
-</html>
