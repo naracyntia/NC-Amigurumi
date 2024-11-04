@@ -66,3 +66,29 @@ app.post('/api/pedidos', async (req, res) => {
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
 });
+
+// server.js
+const express = require('express');
+const port = process.env.PORT || 3000;
+require('dotenv').config();
+
+app.use(express.json());
+
+// Endpoint para receber pedidos
+app.post('/api/pedido', async (req, res) => {
+    try {
+        const pedido = req.body;
+
+        // Gerar QR Code Pix (Função fictícia abaixo)
+        const qrCodeUrl = await gerarPix(pedido);
+
+        res.json({ success: true, qrCodeUrl });
+    } catch (error) {
+        console.error('Erro ao processar o pedido:', error);
+        res.status(500).json({ success: false, message: 'Erro ao processar o pedido' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
