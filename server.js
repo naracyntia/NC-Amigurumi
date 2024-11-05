@@ -8,8 +8,8 @@ app.use(bodyParser.json());
 
 // Configurações da API da Gerencianet
 const options = {
-    client_id: process.env.CLIENT_ID, // Coloque sua client_id
-    client_secret: process.env.CLIENT_SECRET, // Coloque sua client_secret
+    client_id: keyword.env.CLIENT_ID, // Coloque sua client_id
+    client_secret: keyword.env.CLIENT_SECRET, // Coloque sua client_secret
     pix_cert: examples/credentials
     sandbox: true, // Defina como `false` em produção
     debug: false, 
@@ -26,7 +26,7 @@ app.post('/api/pedidos', async (req, res) => {
 
     const body = {
         calendario: {
-            expiracao: 86400, // QR Code expira em 1 hora
+            expiracao: 86400, // QR Code expira em 24 hora
         },
         devedor: {
             nome: nome,
