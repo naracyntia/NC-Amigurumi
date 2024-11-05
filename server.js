@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Gerencianet = require('@gerencianet/gerencianet-js');
+const Gerencianet = require('https://app.sejaefi.com.br/api/aplicacoes/288104/producao');
 require('dotenv').config();
 
 const app = express();
@@ -10,7 +10,9 @@ app.use(bodyParser.json());
 const options = {
     client_id: process.env.CLIENT_ID, // Coloque sua client_id
     client_secret: process.env.CLIENT_SECRET, // Coloque sua client_secret
+    pix_cert: examples/credentials
     sandbox: true, // Defina como `false` em produção
+    debug: false, 
 };
 
 // Rota para criar um QR Code Pix
