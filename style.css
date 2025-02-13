@@ -9,7 +9,7 @@ body {
 header {
     text-align: center;
     padding: 1em;
-    background-color: rgb(229, 191, 247); 
+    background-color: rgb(151, 80, 199); 
     color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -17,7 +17,7 @@ header {
 footer {
     text-align: justify;
     padding: 1em;
-    background-color: rgb(210, 160, 243); /* Lilás claro */
+    background-color: rgb(151, 80, 199)/* Lilás claro */
     color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -32,7 +32,7 @@ a:hover {
 }
 
 #Amigurumi img {
-    width: 300px; /* Defina a largura máxima desejada */
+    width: 250px; /* Defina a largura máxima desejada */
     height: auto; /* Mantém a proporção da imagem */
     margin: 10px; /* Espaço ao redor de cada imagem */
     border-radius: 5px; /* Opcional: arredonda os cantos das imagens */
