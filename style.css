@@ -17,7 +17,7 @@ header {
 footer {
     text-align: justify;
     padding: 1em;
-    background-color: rgb(151, 80, 199)/* Lilás claro */
+    background-color: rgb(151, 80, 199);/* Lilás claro */
     color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
