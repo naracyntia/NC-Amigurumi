@@ -31,39 +31,55 @@ a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-#Amigurumi img {
+/* #Amigurumi img {
     width: 250px; /* Defina a largura máxima desejada */
     height: auto; /* Mantém a proporção da imagem */
     margin: 10px; /* Espaço ao redor de cada imagem */
     border-radius: 5px; /* Opcional: arredonda os cantos das imagens */
-}
+/* }
 
 div {
     display: flex;
     unicode-bidi: isolate;
+/* } */ */ */
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-
-#produtos {
-    display: flex;
-    gap: 2em;
-    padding: 1em;
+.produto img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .produto {
-    border: 1px solid #ddd;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 250px; /* Ajuste conforme necessário */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
 }
 
-#carrinho {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 1em;
-    width: 300px;
+.adicionar-carrinho {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.adicionar-carrinho:hover {
+    background-color: #45a049;
 }
 
 button {
@@ -91,3 +107,4 @@ button {
     max-width: 100%;
     height: auto;
 }
+
