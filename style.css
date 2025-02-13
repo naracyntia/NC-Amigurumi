@@ -43,13 +43,6 @@ div {
     unicode-bidi: isolate;
 }
 
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
 .produto img {
     width: 100%;
     max-width: 250px;
@@ -77,9 +70,6 @@ div {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-.adicionar-carrinho:hover {
-    background-color: #45a049;
 }
 
 button {
