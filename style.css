@@ -31,17 +31,17 @@ a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* #Amigurumi img {
+#Amigurumi img {
     width: 250px; /* Defina a largura máxima desejada */
     height: auto; /* Mantém a proporção da imagem */
     margin: 10px; /* Espaço ao redor de cada imagem */
     border-radius: 5px; /* Opcional: arredonda os cantos das imagens */
-/* }
+}
 
 div {
     display: flex;
     unicode-bidi: isolate;
-/* } */ */ */
+}
 
 .grid-container {
     display: flex;

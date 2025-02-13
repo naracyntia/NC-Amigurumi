@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const options = {
     client_id: keyword.env.CLIENT_ID, // Coloque sua client_id
     client_secret: keyword.env.CLIENT_SECRET, // Coloque sua client_secret
-    pix_cert: examples/credentials
+    pix_cert: examples/credentials,
     sandbox: true, // Defina como `false` em produção
     debug: false, 
 };

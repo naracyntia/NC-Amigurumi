@@ -1,40 +1,152 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar Pedido - NC Amigurumi</title>
+    <title>Cyntia Amigurumi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Finalizar Pedido</h1>
+        <h1>Bem-vindo à NC Amigurumi</h1>
+        <p>Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para sua família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.</p>
+        <p>Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos produtos e encontre o amigurumi ideal para você ou para quem você ama!</p>
+        <a href="finalizar-pedido.html"><button>Finalizar Pedido>(<span id="total-items">0</span>)</button></a>
     </header>
 
-    <section>
-        <h2>Informações para Finalização</h2>
-        <form action="/submit-order" method="POST">
-            <label for="name">Nome Completo:</label>
-            <input type="text" id="name" name="name" required>
+    <section id="Amigurumi">
+        <h2>Nossos Amigurumis</h2>
+        <p>São mais do que apenas itens decorativos ou brinquedos: são peças que carregam sentimentos, sendo perfeitos para presentear e alegrar os ambientes. Contamos com uma grande variedade de modelos, desde personagens infantis até animais e figuras temáticas, atendendo a todas as idades e preferências.</p>
+    
+        <section id="galeria">
+            <h2>Galeria de Amigurumis</h2>
+            
+            <!-- Item de Amigurumi -->
+            <div class="produto">
+                <img src="fotos/vaquinhafrente.jpeg" alt="vaquinha" width="250" height="200">
+                <img src="fotos/vaquinhacosta.jpeg" alt="vaquinha" width="250" height="200">
+                <h3>Vaquinha</h3>
+                <p>R$ 110,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
-            <label for="address">Endereço de Entrega:</label>
-            <input type="text" id="address" name="address" required>
+            <div class="produto">
+                <img src="fotos/mickeyfrente.jpeg" alt="mickey" width="300" height="200">
+                <img src="fotos/mickeycosta.jpeg" alt="mickey" width="300" height="200">
+                <h3>Mickey</h3>
+                <p>R$95,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
-            <label for="payment">Forma de Pagamento:</label>
-            <select id="payment" name="payment" required>
-                <option value="pix">PIX</option>
-            </select>
+            <div class="produto">
+                <img src="fotos/cachorrinho1.jpeg" alt="cachorrinho" width="300" height="200">
+                <img src="fotos/cachorrinho2.jpeg" alt="cachorrinho" width="300" height="200">
+                <h3>Cachorrinho</h3>
+                <p>R$30,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
-            <label for="notes">Observações:</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Instruções adicionais para entrega"></textarea>
+            <div class="produto">
+                <img src="fotos/portatreco1.jpeg" alt="portatreco" width="300" height="200">
+                <img src="fotos/portatreco2.jpeg" alt="portatreco" width="300" height="200">
+                <h3>Porta treco</h3>
+                <p>R$25,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
-            <button type="submit">Confirmar Pedido</button>
-        </form>
-    </section>
+            <div class="produto">
+                <img src="fotos/capivara.jpeg" alt="Capivara" width="300" height="200">
+                <h3>Capivara</h3>
+                <p>R$ 95,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+        
+            <div class="produto">
+                <img src="fotos/homemaranha.jpeg" alt="homemaranha" width="300" height="200">
+                <h3>Homem Aranha</h3>
+                <p>R$ 85,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+        
+            <div class="produto">
+                <img src="fotos/raposa.jpeg" alt="Raposa" width="300" height="200">
+                <h3>Raposa</h3>
+                <p>R$ 50,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
 
-    <footer>
-        <p>&copy; 2024 NC Amigurumi. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+            <div class="produto">
+                <img src="fotos/coala.jpg" alt="coala" width="300" height="200">
+                <h3>Coala</h3>
+                <p>R$ 50,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="fotos/pintinhoamarelinho.jpg" alt="pintinhoamarelinho" width="300" height="200">
+                <h3>Pintinho amarelinho</h3>
+                <p>R$ 55,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="fotos/duolingo.jpeg" alt="duolingo" width="300" height="200">
+                <h3>Duolingo</h3>
+                <p>R$ 70,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="fotos/edwiges.jpeg" alt="edwiges" width="300" height="200">
+                <h3>Edwiges</h3>
+                <p>R$70,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="fotos/santinha.jpg" alt="santinha" width="300" height="200">
+                <h3>Santinha</h3>
+                <p>R$25,00</p>
+                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </section>
+               
+        <section id="videos">
+            <h2>Confira Nossos Amigurumis em Vídeo</h2> 
+            
+            <!-- Vídeos -->
+            <video controls>
+                <source src="videos/vaquinha.MP4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="videos/duolingo.MP4" type="video/mp4">
+            </video>
+           
+            <video controls>
+                <source src="videos/edwirges.MP4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="videos/mickey.mp4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="videos/capivara.mp4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="videos/homemaranha.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Adicione mais imagens e vídeos conforme necessário -->
+        </section>
+    
+        <section>
+            <!-- Conteúdo da loja e produtos -->
+            <div id="cart"></div>
+            <div id="total"></div>
+        </section>
+    
+        <!-- Link para o arquivo de JavaScript -->
+        <script src="script.js"></script>
+    </body>
+    </html>
 
