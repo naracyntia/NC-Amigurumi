@@ -34,7 +34,7 @@ a:hover {
 /* === Galeria de Amigurumis === */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
   gap: 20px; /* Espaçamento entre os cards */
   justify-items: center; /* Centraliza cada item */
   margin: 30px auto;
@@ -56,7 +56,7 @@ a:hover {
 }
 
 .produto:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /* === Imagens padronizadas === */

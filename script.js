@@ -13,11 +13,18 @@ function updateCartDisplay() {
   document.getElementById('total-items').textContent = totalItems;
 }
 
-// Função para abrir o formulário (Google Forms)
-function openFormModal() {
-  const modal = document.getElementById('formModal');
-  modal.style.display = 'block';
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const finalizarBtn = document.getElementById("btnFinalizar");
+
+  if (finalizarBtn) {
+    finalizarBtn.addEventListener("click", () => {
+      // Substitua o link abaixo pelo link real do seu formulário Google Forms:
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeoeR_2F0asI37oL-l8Zyh20bdzIviqbiF21fGhTn8Dkzdx7w/viewform?usp=dialog";
+      window.open(formUrl, "_blank"); // abre o formulário em nova aba
+    });
+  }
+});
+
 
 // Fecha o modal
 function closeFormModal() {
