@@ -21,3 +21,22 @@ function updateCartDisplay() {
     document.getElementById('total').textContent = 'Total: R$ ' + total.toFixed(2);
 }
 
+// Abrir e fechar o modal
+const modal = document.getElementById("formModal");
+const btn = document.getElementById("btnFinalizar");
+const span = document.querySelector(".close");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
