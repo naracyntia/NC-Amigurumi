@@ -1,6 +1,4 @@
-keyword.env/
-.keyword.env/
-./keyword.env
+*.env
 
 
 
