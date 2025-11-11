@@ -159,3 +159,18 @@ button {
 .btn-finalizar:hover {
   background-color: #45a049;
 }
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* deixa o logo e o texto empilhados */
+  padding: 20px;
+  background-color: #fffafc; /* cor de fundo clara e artesanal */
+}
+
+.logo {
+  width: 180px; /* ajuste conforme o tamanho da imagem */
+  height: auto;
+  margin-bottom: 10px;
+}
