@@ -162,8 +162,8 @@ button {
 
 .cabecalho {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   flex-direction: column; /* deixa o logo e o texto empilhados */
   padding: 20px;
   background-color: #fffafc; /* cor de fundo clara e artesanal */
