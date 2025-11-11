@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="fotos/logo.png" alt="Logo Narigurumi" class="logo">
-    <h1>Narigurumi</h1>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Bem-vindo/h1>
-        <p>Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para sua
-            família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando
-            materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.</p>
-        <p>Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos
-            produtos e encontre o amigurumi ideal para você ou para quem você ama!</p>
-        <button id="btnFinalizar">Finalizar Pedido>(<span id="total-items">0</span>)</button>
-
+    <header class="cabecalho">
+        <img src="fotos/logo.png" alt="Logo Narigurumi" class="logo">
+        <div class="texto-cabecalho">
+            <h1>Bem-vindo</h1>
+            <p>
+                Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para
+                sua família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão,
+                utilizando materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos
+                adoram.
+            </p>
+            <p>
+                Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer
+                nossos produtos e encontre o amigurumi ideal para você ou para quem você ama!
+            </p>
+        </div>
     </header>
+
 
     <section id="Amigurumi">
         <h2>Nossos Amigurumis</h2>
+        </p>
         <p>São mais do que apenas itens decorativos ou brinquedos: são peças que carregam sentimentos, sendo perfeitos
             para presentear e alegrar os ambientes. Contamos com uma grande variedade de modelos, desde personagens
             infantis até animais e figuras temáticas, atendendo a todas as idades e preferências.</p>
@@ -34,8 +40,8 @@
                 <img src="fotos/vaquinhacosta.jpeg" alt="vaquinha - verso">
                 <h3>Vaquinha</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" aria-label="Adicionar Vaquinha ao carrinho">Adicionar ao
-                    Carrinho</button>
+                <button onclick="addItemToCart('vaquinha', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('vaquinha')">Remover</button>
             </div>
 
             <div class="produto">
@@ -43,8 +49,8 @@
                 <img src="fotos/mickeycosta.jpeg" alt="mickey - verso">
                 <h3>Mickey</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" aria-label="Adicionar Mickey ao carrinho">Adicionar ao
-                    Carrinho</button>
+                <button onclick="addItemToCart('mickey', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('mickey')">Remover</button>
             </div>
 
             <div class="produto">
@@ -52,8 +58,8 @@
                 <img src="fotos/cachorrinho2.jpeg" alt="cachorrinho - verso">
                 <h3>Cachorrinho</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" aria-label="Adicionar Cachorrinho ao carrinho">Adicionar ao
-                    Carrinho</button>
+                <button onclick="addItemToCart('cachorrinho', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('cachorrinho')">Remover</button>
             </div>
 
             <div class="produto">
@@ -61,67 +67,82 @@
                 <img src="fotos/portatreco2.jpeg" alt="portatreco - verso">
                 <h3>Porta treco</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" aria-label="Adicionar Porta treco ao carrinho">Adicionar ao
-                    Carrinho</button>
+                <button onclick="addItemToCart('porta treco', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('porta treco')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/capivara.jpeg" alt="Capivara">
                 <h3>Capivara</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button onclick="addItemToCart('capivara', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('capivara')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/homemaranha.jpeg" alt="homemaranha">
                 <h3>Homem Aranha</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button onclick="addItemToCart('homen aranha', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('homen aranha')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/raposa.jpeg" alt="Raposa">
                 <h3>Raposa</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button onclick="addItemToCart('raposa', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('raposa')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/coala.jpg" alt="coala">
                 <h3>Coala</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button onclick="addItemToCart('coala', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('coala')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/pintinhoamarelinho.jpg" alt="pintinhoamarelinho">
                 <h3>Pintinho amarelinho</h3>
                 <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button onclick="addItemToCart('pintinho amarelinho', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('pintinho amarelinho')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/duolingo.jpeg" alt="duolingo">
                 <h3>Duolingo</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <p>R$ 1,00</p>
+                <button onclick="addItemToCart('duolingo', 1.00)">Adicionar ao Carrinho</button>
+                <button onclick="removeItemFromCart('duolingo')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/edwiges.jpeg" alt="edwiges">
                 <h3>Edwiges</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                <p>R$ 1,00</p>
+                <button onclick="addItemToCart('edwiges', 1.00)">Adicionar ao carrinho</button>
+                <button onclick="removeItemFromCart('edwiges')">Remover</button>
             </div>
 
             <div class="produto">
                 <img src="fotos/santinha.jpg" alt="santinha">
                 <h3>Santinha</h3>
-                <p>R$ 0,00</p>
-                <button class="adiciona-carrinho">Adicionar ao Carrinho</button>
+                <p>R$ 1,00</p>
+                <button onclick="addItemToCart('santinha', 1.00)">Adicionar ao carrinho</button>
+                <button onclick="removeItemFromCart('santinha')">Remover</button>
             </div>
+
             <!-- Adicione mais itens conforme necessário -->
         </section>
+
+        <button id="btnFinalizar">
+            Finalizar Pedido
+            (<span id="total-items">0</span> Valor - R$ <span id="total-valor">0,00</span>)
+        </button>
+
 
         <section id="videos">
             <h2>Confira Nossos Amigurumis em Vídeo</h2>
@@ -158,9 +179,6 @@
 
         <!-- Link para o arquivo de JavaScript -->
         <script src="script.js"></script>
-
-        <!-- Botão de Finalizar Pedido -->
-        <button id="btnFinalizar" class="btn-finalizar">Finalizar Pedido>(0)</button>
 
         <!-- Modal do Google Forms -->
         <div id="formModal" class="modal">
