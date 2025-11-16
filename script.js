@@ -91,6 +91,54 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Fallback e suporte a touch para troca de imagens em .img-container
+document.addEventListener('DOMContentLoaded', () => {
+  // para cada img-container, adiciona listeners para garantir troca em dispositivos que não aplicam :hover
+  document.querySelectorAll('.img-container').forEach(container => {
+    const main = container.querySelector('.img-main');
+    const hover = container.querySelector('.img-hover');
+
+    if (!main || !hover) return;
+
+    // mouseenter / mouseleave (desktop)
+    container.addEventListener('mouseenter', () => {
+      main.style.opacity = '0';
+      hover.style.opacity = '1';
+      main.style.transform = 'scale(1.12)';
+      hover.style.transform = 'scale(1.12)';
+    });
+    container.addEventListener('mouseleave', () => {
+      main.style.opacity = '1';
+      hover.style.opacity = '0';
+      main.style.transform = 'scale(1)';
+      hover.style.transform = 'scale(1)';
+    });
+
+    // touch: alterna imagem ao tocar (primeiro toque mostra a hover; segundo volta)
+    let touched = false;
+    container.addEventListener('touchstart', (e) => {
+      e.stopPropagation();
+      if (!touched) {
+        main.style.opacity = '0';
+        hover.style.opacity = '1';
+        touched = true;
+      } else {
+        main.style.opacity = '1';
+        hover.style.opacity = '0';
+        touched = false;
+      }
+    });
+
+    // opcional: reset quando clicar fora
+    document.addEventListener('touchstart', (e) => {
+      if (!container.contains(e.target)) {
+        main.style.opacity = '1';
+        hover.style.opacity = '0';
+        touched = false;
+      }
+    });
+  });
+});
 
 
 

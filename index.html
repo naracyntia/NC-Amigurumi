@@ -1,152 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narigurumi - Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-    <header class="cabecalho">
-        <img src="fotos/logo.png" alt="Logo Narigurumi" class="logo">
-        <h1>Bem-vindo</h1>
-        <p>Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para sua
-            família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando
-            materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.</p>
-        <p>Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos
-            produtos e encontre o amigurumi ideal para você ou para quem você ama!
 
-        <section id="galeria">
-            <!-- Item de Amigurumi -->
-            <div class="produto" tabindex="0" aria-label="Produto Vaquinha">
-                <img src="fotos/vaquinhafrente.jpeg" alt="vaquinha - frente">
-                <img src="fotos/vaquinhacosta.jpeg" alt="vaquinha - verso">
-                <h3>Vaquinha</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" data-name="Vaquinha" data-price="0"> Adicionar ao Carrinho
-                </button>
-            </div>
+<header class="cabecalho">
+    <img src="fotos/logo.png" alt="Logo Narigurumi" class="logo">
 
-            <div class="produto">
-                <img src="fotos/mickeyfrente.jpeg" alt="mickey - frente">
-                <img src="fotos/mickeycosta.jpeg" alt="mickey - verso">
-                <h3>Mickey</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" data-name="Mickey">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
+    <h1>Bem-vindo</h1>
 
-            <div class="produto">
-                <img src="fotos/cachorrinho1.jpeg" alt="cachorrinho - frente">
-                <img src="fotos/cachorrinho2.jpeg" alt="cachorrinho - verso">
-                <h3>Cachorrinho</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" aria-label="Adicionar Cachorrinho ao carrinho">Adicionar ao
-                    Carrinho</button>
-            </div>
+    <p>
+        Aqui, transformamos criatividade e carinho em pequenos amigurumis de crochê, trazendo para você e para sua
+        família o encantamento dos amigurumis. Nossos produtos são feitos à mão com cuidado e precisão, utilizando
+        materiais de alta qualidade para garantir durabilidade, segurança e o toque macio que todos adoram.
+    </p>
 
-            <div class="produto">
-                <img src="fotos/portatreco1.jpeg" alt="portatreco - frente">
-                <img src="fotos/portatreco2.jpeg" alt="portatreco - verso">
-                <h3>Porta treco</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho" aria-label="Adicionar Porta treco ao carrinho">Adicionar ao
-                    Carrinho</button>
-            </div>
+    <p>
+        Nosso compromisso é oferecer amigurumis que inspirem afeto e diversão a cada ponto. Venha conhecer nossos
+        produtos e encontre o amigurumi ideal para você ou para quem você ama!
+    </p>
+</header>
 
-            <div class="produto">
-                <img src="fotos/capivara.jpeg" alt="Capivara">
-                <h3>Capivara</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+<!-- ===================== GALERIA ===================== -->
 
-            <div class="produto">
-                <img src="fotos/homemaranha.jpeg" alt="homemaranha">
-                <h3>Homem Aranha</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+<section id="galeria">
 
-            <div class="produto">
-                <img src="fotos/raposa.jpeg" alt="Raposa">
-                <h3>Raposa</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+    <!-- === Vaquinha === -->
+    <div class="produto" tabindex="0" aria-label="Produto Vaquinha">
+        <div class="img-container">
+            <img src="fotos/vaquinhafrente.jpeg" class="img-main" alt="vaquinhafrente">
+            <img src="fotos/vaquinhacosta.jpeg" class="img-hover" alt="vaquinhacosta">
+        </div>
+        <h3>Vaquinha</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho" data-name="Vaquinha" data-price="0">Adicionar ao Carrinho</button>
+    </div>
 
-            <div class="produto">
-                <img src="fotos/coala.jpg" alt="coala">
-                <h3>Coala</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+    <!-- === Mickey === -->
+    <div class="produto">
+        <div class="img-container">
+            <img src="fotos/mickeyfrente.jpeg" class="img-main" alt="mickeyfrente">
+            <img src="fotos/mickeycosta.jpeg" class="img-hover" alt="mickeycosta">
+        </div>
+        <h3>Mickey</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho" data-name="Mickey">Adicionar ao Carrinho</button>
+    </div>
 
-            <div class="produto">
-                <img src="fotos/pintinhoamarelinho.jpg" alt="pintinhoamarelinho">
-                <h3>Pintinho amarelinho</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+    <!-- === Cachorrinho === -->
+    <div class="produto">
+        <div class="img-container">
+            <img src="fotos/cachorrinho1.jpeg" class="img-main"   alt="cachorrinho1">
+            <img src="fotos/cachorrinho2.jpeg" class="img-hover"  alt="cachorrinho2"> >
+        </div>
+        <h3>Cachorrinho</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-            <div class="produto">
-                <img src="fotos/duolingo.jpeg" alt="duolingo">
-                <h3>Duolingo</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+    <!-- === Porta Treco === -->
+    <div class="produto">
+        <div class="img-container">
+            <img src="fotos/portatreco1.jpeg" class="img-main"  alt="portatreco1">
+            <img src="fotos/portatreco2.jpeg" class="img-hover" alt="portatreco2">
+        </div>
+        <h3>Porta treco</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-            <div class="produto">
-                <img src="fotos/edwiges.jpeg" alt="edwiges">
-                <h3>Edwiges</h3>
-                <p>R$ 0,00</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
+    <!-- === Produtos com apenas 1 imagem === -->
 
-            <div class="produto">
-                <img src="fotos/santinha.jpg" alt="santinha">
-                <h3>Santinha</h3>
-                <p>R$ 0,00</p>
-                <button class="adiciona-carrinho">Adicionar ao Carrinho</button>
-            </div>
-            <!-- Adicione mais itens conforme necessário -->
-        </section>
+    <div class="produto">
+        <img src="fotos/capivara.jpeg" alt="Capivara">
+        <h3>Capivara</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-        </p>
-        <a href="finalizar-pedido.html"><button>Finalizar Pedido (<span id="total-items">0</span>)</button></a>
-    </header>
+    <div class="produto">
+        <img src="fotos/homemaranha.jpeg" alt="Homem Aranha">
+        <h3>Homem Aranha</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-    <section id="videos">
-        <h2>Confira Nossos Amigurumis em Vídeo</h2>
+    <div class="produto">
+        <img src="fotos/raposa.jpeg" alt="Raposa">
+        <h3>Raposa</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-        <!-- Vídeos -->
-        <video controls>
-            <source src="videos/vaquinha.MP4" type="video/mp4">
-        </video>
-        <video controls>
-            <source src="videos/duolingo.MP4" type="video/mp4">
-        </video>
+    <div class="produto">
+        <img src="fotos/coala.jpg" alt="Coala">
+        <h3>Coala</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-        <video controls>
-            <source src="videos/edwirges.MP4" type="video/mp4">
-        </video>
-        <video controls>
-            <source src="videos/mickey.mp4" type="video/mp4">
-        </video>
-        <video controls>
-            <source src="videos/capivara.mp4" type="video/mp4">
-        </video>
-        <video controls>
-            <source src="videos/homemaranha.mp4" type="video/mp4">
-        </video>
+    <div class="produto">
+        <img src="fotos/pintinhoamarelinho.jpg" alt="Pintinho Amarelinho">
+        <h3>Pintinho Amarelinho</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-        <!-- Adicione mais imagens e vídeos conforme necessário -->
-    </section>
+    <div class="produto">
+        <img src="fotos/duolingo.jpeg" alt="Duolingo">
+        <h3>Duolingo</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-    <section>
-        <!-- Conteúdo da loja e produtos -->
-        <div id="cart"></div>
-        <div id="total"></div>
-    </section>
+    <div class="produto">
+        <img src="fotos/edwiges.jpeg" alt="Edwiges">
+        <h3>Edwiges</h3>
+        <p>R$ 0,00</p>
+        <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+    </div>
 
-    <!-- Link para o arquivo de JavaScript -->
-    <script src="script.js"></script>
+    <div class="produto">
+        <img src="fotos/santinha.jpg" alt="Santinha">
+        <h3>Santinha</h3>
+        <p>R$ 0,00</p>
+        <button class="adiciona-carrinho">Adicionar ao Carrinho</button>
+    </div>
+
+</section>
+
+<a href="finalizar-pedido.html">
+    <button>Finalizar Pedido (<span id="total-items">0</span>)</button>
+</a>
+
+<!-- ===================== VÍDEOS ===================== -->
+
+<section id="videos">
+    <h2>Confira Nossos Amigurumis em Vídeo</h2>
+
+    <video controls><source src="videos/vaquinha.MP4" type="video/mp4"></video>
+    <video controls><source src="videos/duolingo.MP4" type="video/mp4"></video>
+    <video controls><source src="videos/edwirges.MP4" type="video/mp4"></video>
+    <video controls><source src="videos/mickey.mp4" type="video/mp4"></video>
+    <video controls><source src="videos/capivara.mp4" type="video/mp4"></video>
+    <video controls><source src="videos/homemaranha.mp4" type="video/mp4"></video>
+</section>
+
+<script src="script.js"></script>
+
 </body>
-
 </html>
