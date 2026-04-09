@@ -1,145 +1,100 @@
-// Carrinho de compras
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Função para adicionar itens ao carrinho
-function addItemToCart(name, price) {
-  cart.push({ name, price });
-  updateCartDisplay();
+// =============================
+// SALVAR
+// =============================
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Adiciona um item ao carrinho
+// =============================
+// ADICIONAR ITEM
+// =============================
 function addItemToCart(name, price) {
-  // Verifica se o item já existe no carrinho
   const item = cart.find(i => i.name === name);
 
   if (item) {
-    item.quantity += 1; // incrementa a quantidade
+    item.quantity += 1;
   } else {
     cart.push({ name, price, quantity: 1 });
   }
 
+  saveCart();
   updateCartDisplay();
 }
 
-// Remove um item do carrinho
-function removeItemFromCart(name) {
-  const itemIndex = cart.findIndex(i => i.name === name);
-
-  if (itemIndex > -1) {
-    const item = cart[itemIndex];
-
-    if (item.quantity > 1) {
-      item.quantity -= 1; // diminui a quantidade
-    } else {
-      cart.splice(itemIndex, 1); // remove o item totalmente
-    }
-  }
-
-  updateCartDisplay();
-}
-
-//Atualiza o número de itens e o valor total no botão "Finalizar Pedido"
+// =============================
+// ATUALIZAR UI
+// =============================
 function updateCartDisplay() {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalValue = cart.reduce((sum, item) => sum + item.price, 0);
 
-  document.getElementById('total-items').textContent = totalItems;
-  document.getElementById('total-valor').textContent = totalValue.toFixed(2).replace('.', ',');
+  const itemsEl = document.getElementById('total-items');
+  if (itemsEl) itemsEl.textContent = totalItems;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const finalizarBtn = document.getElementById("btnFinalizar");
+// =============================
+// GERAR TEXTO DO PEDIDO
+// =============================
+function generateOrderText() {
+  return cart.map(item =>
+    `${item.name} (x${item.quantity})`
+  ).join(", ");
+}
 
-  if (finalizarBtn) {
-    finalizarBtn.addEventListener("click", () => {
-      
-      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeoeR_2F0asI37oL-l8Zyh20bdzIviqbiF21fGhTn8Dkzdx7w/viewform?usp=dialog";
-      window.open(formUrl, "_blank"); // abre o formulário em nova aba
-    });
+// =============================
+// ENVIAR PEDIDO
+// =============================
+function enviarPedido() {
+
+  const nome = document.getElementById("nome")?.value;
+
+  if (!nome || cart.length === 0) {
+    alert("Preencha seu nome e adicione produtos!");
+    return;
   }
-});
 
+  const produtos = generateOrderText();
 
-// Fecha o modal
-function closeFormModal() {
-  const modal = document.getElementById('formModal');
-  modal.style.display = 'none';
+  const data = new URLSearchParams();
+  data.append("entry.2005620554", nome);
+  data.append("entry.1045781291", produtos);
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSeoeR_2F0asI37oL-l8Zyh20bdzIviqbiF21fGhTn8Dkzdx7w/formResponse", {
+    method: "POST",
+    mode: "no-cors",
+    body: data
+  });
+
+  alert("Pedido enviado com sucesso!");
+
+  cart = [];
+  saveCart();
+  updateCartDisplay();
 }
 
-// Espera o DOM carregar antes de buscar os elementos
-document.addEventListener('DOMContentLoaded', () => {
-  // Botões de adicionar ao carrinho
-  const buttons = document.querySelectorAll('.adicionar-carrinho');
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const name = button.getAttribute('data-name');
-      const price = parseFloat(button.getAttribute('data-price'));
+// =============================
+// EVENTOS
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+
+  updateCartDisplay();
+
+  document.querySelectorAll('.adicionar-carrinho').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.name;
+      const price = parseFloat(btn.dataset.price || 0);
+
+      if (!name) {
+        alert("Produto sem nome configurado!");
+        return;
+      }
+
       addItemToCart(name, price);
     });
   });
 
-  // Botão de finalizar pedido
-  const btnFinalizar = document.getElementById('btnFinalizar');
-  if (btnFinalizar) {
-    btnFinalizar.addEventListener('click', openFormModal);
-  }
-
-  // Fechar o modal
-  const closeBtn = document.querySelector('.close');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeFormModal);
-  }
 });
-
-// Fallback e suporte a touch para troca de imagens em .img-container
-document.addEventListener('DOMContentLoaded', () => {
-  // para cada img-container, adiciona listeners para garantir troca em dispositivos que não aplicam :hover
-  document.querySelectorAll('.img-container').forEach(container => {
-    const main = container.querySelector('.img-main');
-    const hover = container.querySelector('.img-hover');
-
-    if (!main || !hover) return;
-
-    // mouseenter / mouseleave (desktop)
-    container.addEventListener('mouseenter', () => {
-      main.style.opacity = '0';
-      hover.style.opacity = '1';
-      main.style.transform = 'scale(1.12)';
-      hover.style.transform = 'scale(1.12)';
-    });
-    container.addEventListener('mouseleave', () => {
-      main.style.opacity = '1';
-      hover.style.opacity = '0';
-      main.style.transform = 'scale(1)';
-      hover.style.transform = 'scale(1)';
-    });
-
-    // touch: alterna imagem ao tocar (primeiro toque mostra a hover; segundo volta)
-    let touched = false;
-    container.addEventListener('touchstart', (e) => {
-      e.stopPropagation();
-      if (!touched) {
-        main.style.opacity = '0';
-        hover.style.opacity = '1';
-        touched = true;
-      } else {
-        main.style.opacity = '1';
-        hover.style.opacity = '0';
-        touched = false;
-      }
-    });
-
-    // opcional: reset quando clicar fora
-    document.addEventListener('touchstart', (e) => {
-      if (!container.contains(e.target)) {
-        main.style.opacity = '1';
-        hover.style.opacity = '0';
-        touched = false;
-      }
-    });
-  });
-});
-
 
 
 
